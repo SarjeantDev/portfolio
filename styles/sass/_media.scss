@@ -1,0 +1,89 @@
+
+@media (max-width: 750px) {
+    nav {
+        position: fixed;
+        background-color: $colorWhite;
+        color: $colorDarkGray;
+        position: 'fixed';
+        margin: 0;
+        border-bottom: 1px solid $colorDarkGray;
+    }
+    .navItems {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        li:nth-of-type(2n) {
+            padding: 20px;
+        }
+    }
+    .hamburgerIcon {
+        display: flex;
+    }
+    .portfolioItem {
+        flex-direction: column-reverse;
+        h5, p {
+            text-align: center;
+        }
+        h5 {
+            margin-bottom: 10px;
+        }
+        .portfolioText {
+            width: 95%;
+        }
+        .portfolioSocials {
+            width: 100%;
+            justify-content: center;
+        }
+            .portfolioImg {
+            width: 70%;
+         }
+    }
+    .portfolioItem:nth-of-type(2) {
+        text-align: center;
+        flex-direction: column;
+        h5, i {
+            text-align: center;
+        }
+        .portfolioSocials {
+            justify-content: center;
+        }
+    }
+}
+
+// mobile version 
+@media (max-width: 650px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        .aboutMeImg {
+            width: 40%;
+            margin-bottom: 40px;
+        }
+        .aboutMeText {
+            width: 95%;
+            text-align: center;
+            h3, h4 {
+                text-align: center;
+            }   
+            .aboutResume {
+                width: 100%;
+            }
+        }
+        .aboutMeSocials {
+            justify-content: center;
+        }
+    }
+    // shrinking form size
+    .contact {
+        form {
+            width: 300px;
+            textarea {
+                min-width: 300px;
+            }
+            button {
+                width: 50%;
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+.portfolio {
+    margin: 50px auto;
+    h3, h4 {
+        text-align: center;
+    }
+}
+
+.portfolioItem {
+    justify-content: space-between;
+    padding: 20px 0;
+    .portfolioImg {
+        border-radius: 5%;
+        width: 30%;
+        max-width: 400px;
+        align-self: center;
+        @include imgBoxShadow(10px);
+    }
+    .portfolioImg:hover, .portfolioImg:focus {
+        border: 1px solid $colorBlack;
+    }
+    .portfolioText {
+        width: 70%;
+        padding: 0 50px;
+        justify-self: space-between;
+        h5 {
+            height: 30px;
+        }
+        p {
+            width: 100%;
+        }
+        i {
+            font-size: 3rem;
+        }
+        i:nth-of-type(2n) {
+            margin: 0 10px;
+        }
+        .fa-chevron-left{
+            margin-left: 20px;
+        }
+        .fa-chevron-right, .fa-chevron-left {
+            font-size: 1.5rem;
+        }
+    }
+    .portfolioUsedSkills {
+        width: 100%;
+    }
+    .portfolioSocials {
+        margin: 10px 0;
+        width: 100%;
+        align-items: center;
+        a {
+            @include socials();
+        } 
+        a:hover, a:focus {
+            @include socialsHover();
+        }  
+    }
+    img {
+        border-radius: 5%;
+    }
+}
+
+.portfolioItem:nth-of-type(2) {
+    text-align: right;
+    h5, i {
+        text-align: right;
+    }
+    .fa-chevron-right {
+        margin-right: 20px;
+    }
+    .portfolioSocials {
+        justify-content: right;
+    }
+    .portfolioImg {
+        @include imgBoxShadow(-10px);
+    }
+}

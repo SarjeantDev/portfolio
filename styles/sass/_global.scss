@@ -1,0 +1,53 @@
+// GLOBAL STYLES 
+body {
+    font-family: $fontRaleway;
+    color: $colorDarkGray;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.wrapper {
+    max-width: 1080px;
+    width: 98%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+// Stripping of styles
+*, h1, h2, h3, h4, h5, p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;   
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}
+
+// Creation of flex container for later use
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button {
+    @include button();
+}
+
+button:hover, button:focus {
+    @include buttonHover();
+}
+
+

@@ -1,0 +1,25 @@
+.services {
+    padding: 50px 0;
+    text-align: center;
+    background-color: $colorOffWhite;
+    h5 {
+        padding: 10px 0;
+    }
+    .servicesList {
+        padding: 10px 0;
+        align-items: center;
+        justify-content: space-evenly;
+        .servicesItem {
+            width: 30%;
+            padding: 10px 0;
+            i {
+                color:$colorDarkGray;
+                font-size: 5rem;
+            }
+        }
+        i:hover {
+            color: $colorLightGray;
+            transition: 0.5s all;
+        }
+    }
+}
