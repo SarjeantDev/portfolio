@@ -1,13 +1,17 @@
+// CONTACT section styles
 .contact {
-    padding-top: 50px;
+    padding-top: 100px;
     background-color: $colorOffWhite;
     min-height: 60vh;
     .contactDivs {
         justify-content: space-evenly;
         align-items: center;
     }
-    h3, h4 {
+    p, h3, h4 {
         text-align: center;
+    }
+    a:hover {
+        color: darkblue;
     }
     form {
         margin: 0 auto 10px;

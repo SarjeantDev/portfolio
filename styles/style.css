@@ -277,6 +277,7 @@ body {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -341,13 +342,13 @@ header {
   background-color: black;
 }
 
-header .headerText {
-  position: relative;
+header .overlay {
+  overflow: hidden;
 }
 
 header .heroImg {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 0.4;
@@ -362,14 +363,19 @@ header nav {
   width: 100%;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
+  z-index: 999;
+  border-bottom: 1px solid black;
+  background-color: white;
+  position: fixed;
+  color: black;
 }
 
-header ul {
+header .navUl {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2em 0;
   width: 1080px;
+  padding: 2em 0;
 }
 
 header li {
@@ -408,20 +414,50 @@ header .navItems a:hover, header .navItems a:focus {
 }
 
 header .introContainer {
-  width: 75%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 90vh;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  height: 75vh;
   padding-left: 10px;
 }
 
 header .introContainer .emphasisHeader {
   font-weight: 800;
+}
+
+header .introContainer h1 {
+  justify-self: flex-end;
+}
+
+header .introContainer .downArrow {
+  padding-top: 20px;
+}
+
+header .introContainer .fa-chevron-circle-down {
+  font-size: 4rem;
+  -webkit-animation: bounce 0.5s;
+          animation: bounce 0.5s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+          animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  border: 1px solid transparent;
+}
+
+header .introContainer .fa-chevron-circle-down:hover {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  color: #f2f2f2;
+  cursor: pointer;
 }
 
 .hamburgerIcon {
@@ -432,11 +468,42 @@ header .introContainer .emphasisHeader {
   right: 20px;
 }
 
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 40px, 0);
+            transform: translate3d(0, 40px, 0);
+  }
+}
+
+@keyframes bounce {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 40px, 0);
+            transform: translate3d(0, 40px, 0);
+  }
+}
+
 .about {
-  margin: 50px auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 100px 0;
+}
+
+.about .aboutMeContainer {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .about h3, .about h4 {
@@ -450,13 +517,14 @@ header .introContainer .emphasisHeader {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  text-align: center;
   -webkit-box-shadow: 10px 20px 15px #222222;
           box-shadow: 10px 20px 15px #222222;
 }
 
 .about .aboutMeText {
   width: 70%;
-  padding: 0 50px;
+  padding: 0 0 0 50px;
   -ms-grid-column-align: space-between;
       justify-self: space-between;
 }
@@ -500,7 +568,24 @@ header .introContainer .emphasisHeader {
   transition: color 0.5s;
 }
 
-.about .aboutResume button:focus {
+.about .aboutResume {
+  margin-top: 10px;
+}
+
+.about .aboutResume a {
+  background-color: #222222;
+  color: white;
+  padding: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.about .aboutResume a:focus, .about .aboutResume a:hover {
   color: #222222;
   background-color: white;
   border: 2px solid #222222;
@@ -513,13 +598,19 @@ header .introContainer .emphasisHeader {
 }
 
 .services {
-  padding: 50px 0;
+  padding: 100px 0;
   text-align: center;
   background-color: #f2f2f2;
 }
 
 .services h5 {
   padding: 10px 0;
+}
+
+.services .servicesContainer {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .services .servicesList {
@@ -549,11 +640,17 @@ header .introContainer .emphasisHeader {
 }
 
 .portfolio {
-  margin: 50px auto;
+  padding: 100px 0;
 }
 
 .portfolio h3, .portfolio h4 {
   text-align: center;
+}
+
+.portfolio .portfolioContainer {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .portfolioItem {
@@ -572,10 +669,36 @@ header .introContainer .emphasisHeader {
       align-self: center;
   -webkit-box-shadow: 10px 20px 15px #222222;
           box-shadow: 10px 20px 15px #222222;
+  position: relative;
 }
 
-.portfolioItem .portfolioImg:hover, .portfolioItem .portfolioImg:focus {
-  border: 1px solid black;
+.portfolioItem .portfolioImg img {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.portfolioItem .portfolioImgBackground {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  color: white;
+  background-color: #222222;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.portfolioItem .portfolioImg:hover img, .portfolioItem .portfolioImg:focus img {
+  opacity: 0.5;
+}
+
+.portfolioItem .portfolioImg:hover .portfolioImgBackground, .portfolioItem .portfolioImg:focus .portfolioImgBackground {
+  opacity: 1;
 }
 
 .portfolioItem .portfolioText {
@@ -675,7 +798,7 @@ header .introContainer .emphasisHeader {
 }
 
 .contact {
-  padding-top: 50px;
+  padding-top: 100px;
   background-color: #f2f2f2;
   min-height: 60vh;
 }
@@ -689,8 +812,12 @@ header .introContainer .emphasisHeader {
           align-items: center;
 }
 
-.contact h3, .contact h4 {
+.contact p, .contact h3, .contact h4 {
   text-align: center;
+}
+
+.contact a:hover {
+  color: darkblue;
 }
 
 .contact form {
@@ -737,7 +864,7 @@ header .introContainer .emphasisHeader {
   height: 100%;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 790px) {
   nav {
     position: fixed;
     background-color: white;
@@ -759,6 +886,9 @@ header .introContainer .emphasisHeader {
   }
   .navItems li:nth-of-type(2n) {
     padding: 20px;
+  }
+  .aboutMeImg {
+    text-align: center;
   }
   .hamburgerIcon {
     display: -webkit-box;
@@ -806,7 +936,7 @@ header .introContainer .emphasisHeader {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 651px) {
   .about {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -818,9 +948,11 @@ header .introContainer .emphasisHeader {
   }
   .about .aboutMeImg {
     width: 40%;
+    margin-top: 40px;
     margin-bottom: 40px;
   }
   .about .aboutMeText {
+    padding: 0 50px;
     width: 95%;
     text-align: center;
   }
@@ -886,4 +1018,10 @@ footer .footerSocials a:hover, footer .footerSocials a:focus {
   border: 2px solid #222222;
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
+}
+
+footer h4 {
+  padding-top: 1rem;
+  text-transform: unset;
+  text-align: center;
 }

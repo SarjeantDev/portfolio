@@ -1,9 +1,13 @@
+// SERVICES section styles
 .services {
-    padding: 50px 0;
+    padding: 100px 0;
     text-align: center;
     background-color: $colorOffWhite;
     h5 {
         padding: 10px 0;
+    }
+    .servicesContainer {
+        align-self: center;
     }
     .servicesList {
         padding: 10px 0;

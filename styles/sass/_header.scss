@@ -1,33 +1,40 @@
+// HEADER STYLES 
 header {  
     color: $colorWhite;
     height: 100vh;
     overflow:hidden;
     background-color: $colorBlack;
-    .headerText {
-        position: relative;
+    .overlay {
+        overflow: hidden;
     }
+    // background image styles
     .heroImg {
         width: 100%;
-        height: 100%;
+        height: 100vh;
         object-fit: cover;
         opacity: 0.4;
         position: absolute;
     }
+    // navigation styles
     nav {
         justify-content: center;
         text-transform: uppercase;
         width: 100%;
         transition: 0.5s all;
+        z-index: 999;
+        border-bottom: 1px solid $colorBlack;
+        background-color: $colorWhite;
+        position:fixed;
+        color: $colorBlack;
     }
-    ul {
+    .navUl {
         justify-content: space-between;
-        padding: 2em 0;
         width: 1080px;
+        padding: 2em 0;   
     }
     li {
         align-self: center;
     }
-
     .name {
         font-weight: 800;
         font-size: 2.2rem;
@@ -48,19 +55,38 @@ header {
             font-weight: 600;
             box-shadow: 0px 0px 0px 2px $colorBlack;    
         }
-        
     }
     .introContainer {
-        width: 75%;
         flex-direction: column;
-        justify-content: center;
-        height: 90vh;
+        justify-content: flex-end;
+        position: relative;
+        height: 75vh;
         padding-left: 10px;
         .emphasisHeader {
             font-weight: 800;
         }
+        
+        h1 {
+            justify-self: flex-end;
+        }
+        .downArrow {
+            padding-top: 20px;
+        }
+        .fa-chevron-circle-down {
+            font-size: 4rem;
+            animation: bounce 0.5s;
+            animation-direction: alternate; 
+            animation-timing-function: cubic-bezier(.5, 0.05, 1, .5); 
+            animation-iteration-count: infinite; 
+            border: 1px solid transparent;
+        }
+        .fa-chevron-circle-down:hover {
+            animation: none;
+            transition: 0.5s all;
+            color: $colorOffWhite;
+            cursor: pointer;
+        }
     }
-
 }
 
 // HAMBURGER MENU CREATION 
@@ -70,5 +96,15 @@ header {
     position: fixed;
     top: 10px;
     right: 20px;
+}
+
+// Little animation for bouncing arrow
+@keyframes bounce { 
+    from { 
+        transform: translate3d(0, 0, 0); 
+    } 
+    to { 
+        transform: translate3d(0, 40px, 0); 
+    } 
 }
 

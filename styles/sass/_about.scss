@@ -1,6 +1,11 @@
+// ABOUT section styles
 .about {
-    margin: 50px auto;
     justify-content: space-between;
+    padding: 100px 0;
+    .aboutMeContainer {
+        justify-content: center;
+        align-self: center;
+    }
     h3, h4 {
         text-align: left;
     }
@@ -9,11 +14,12 @@
         width: 30%;
         max-width: 400px;
         align-self: center;
+        text-align: center;
         @include imgBoxShadow(10px);
     }
     .aboutMeText {
         width: 70%;
-        padding: 0 50px;
+        padding: 0 0 0 50px;
         justify-self: space-between;
         p {
             width: 100%;
@@ -32,8 +38,14 @@
             @include socialsHover();
         }
     }
-    .aboutResume button:focus {
-        @include buttonHover();
+    .aboutResume {
+        margin-top: 10px;
+        a { 
+            @include button();
+        }
+    }
+    .aboutResume a:focus, .aboutResume a:hover {
+        @include buttonHover();   
     }
     img {
         border-radius: 5%;
@@ -41,4 +53,12 @@
 }
 
 
+// @keyframes slideIn {
+// 0% {
+//     transform:translateX(-500px);
+// }
+// 100%{
+//     transform: skew(0deg);
+// }
+// }
 

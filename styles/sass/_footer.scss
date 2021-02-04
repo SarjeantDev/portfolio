@@ -1,6 +1,6 @@
-footer{
+// FOOTER background styles
+footer {
     background-color: $colorOffWhite;
-
     .footerSocials {
     justify-content: center;
         padding: 20px 0;
@@ -14,5 +14,10 @@ footer{
         a:hover, a:focus {
             @include socialsHover();
         }
+    }
+    h4 {
+        padding-top: 1rem;
+        text-transform: unset;
+        text-align: center;
     }
 }

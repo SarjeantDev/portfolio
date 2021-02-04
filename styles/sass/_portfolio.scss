@@ -1,7 +1,11 @@
+// PORTFOLIO section styles
 .portfolio {
-    margin: 50px auto;
+    padding: 100px 0;
     h3, h4 {
         text-align: center;
+    }
+    .portfolioContainer {
+        align-self: center;
     }
 }
 
@@ -14,10 +18,33 @@
         max-width: 400px;
         align-self: center;
         @include imgBoxShadow(10px);
+        position: relative;
+        img {
+            transition: 0.5s;
+        }
     }
-    .portfolioImg:hover, .portfolioImg:focus {
-        border: 1px solid $colorBlack;
+
+    .portfolioImgBackground {
+        transition: 0.5s;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 3rem;
+        color: white;
+        background-color: $colorDarkGray;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
     }
+    .portfolioImg:hover img, .portfolioImg:focus img{
+        opacity: 0.5;
+    }
+
+    .portfolioImg:hover .portfolioImgBackground, .portfolioImg:focus .portfolioImgBackground { 
+        opacity: 1;
+    }
+
     .portfolioText {
         width: 70%;
         padding: 0 50px;
