@@ -1,0 +1,73 @@
+.map {
+    padding-left: 10px;
+    p {
+        line-height: 20px;
+    }
+    // stripping global button styles from document earlier 
+    button, 
+    a, 
+    a:hover {
+       all:revert; 
+    }
+
+    // START OF RESTORATION TO MAPBOX STYLES
+    .mapboxgl-ctrl-attrib {
+        font-weight: 700;
+        margin-left: 2px;
+        a {
+            color: rgba(0,0,0,.75);
+            text-decoration: none;
+            padding: 0;
+            background-color: hsla(0,0%,100%,.5);
+        }
+    }
+    .mapboxgl-ctrl-attrib-button {
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'%3E%3Cpath d='M4 10a6 6 0 1012 0 6 6 0 10-12 0m5-3a1 1 0 102 0 1 1 0 10-2 0m0 3a1 1 0 112 0v3a1 1 0 11-2 0'/%3E%3C/svg%3E");
+        background-color: hsla(0,0%,100%,.5);
+        width: 24px;
+        height: 24px;
+        box-sizing: border-box;
+        border-radius: 12px;
+        outline: none;
+        top: 0;
+        right: 0;
+        border: 0;
+    }
+    .mapboxgl-popup-close-button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: 0;
+        border-radius: 0 3px 0 0;
+        cursor: pointer;
+        background-color: transparent;
+        :hover {
+            background-color: rgba(0,0,0,.05);
+        }
+    }
+    // END OF RESTORATION TO MAPBOX STYLES
+    .mapboxgl-popup-content {
+        a {
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+        }  
+        .imgContainer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            img {
+                width: 200px;
+                max-height: 150px;
+                padding-bottom: 10px;
+            } 
+        }  
+    }
+ 
+    .mapboxgl-marker {
+        cursor: pointer;
+    }
+}

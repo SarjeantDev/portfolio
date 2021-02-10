@@ -10,8 +10,14 @@
     p, h3, h4 {
         text-align: center;
     }
+    h4 {
+        margin-bottom: 10px;
+    }
+    a {
+        @include button();
+    }
     a:hover {
-        color: darkblue;
+        @include buttonHover();
     }
     form {
         margin: 0 auto 10px;

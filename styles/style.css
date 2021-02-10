@@ -816,8 +816,29 @@ header .introContainer .fa-chevron-circle-down:hover {
   text-align: center;
 }
 
+.contact h4 {
+  margin-bottom: 10px;
+}
+
+.contact a {
+  background-color: #222222;
+  color: white;
+  padding: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
 .contact a:hover {
-  color: darkblue;
+  color: #222222;
+  background-color: white;
+  border: 2px solid #222222;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
 }
 
 .contact form {
@@ -884,6 +905,9 @@ header .introContainer .fa-chevron-circle-down:hover {
             align-items: center;
     width: 100%;
   }
+  .navItems li:first-of-type {
+    padding-top: 20px;
+  }
   .navItems li:nth-of-type(2n) {
     padding: 20px;
   }
@@ -909,6 +933,10 @@ header .introContainer .fa-chevron-circle-down:hover {
   }
   .portfolioItem .portfolioText {
     width: 95%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 0 20px;
   }
   .portfolioItem .portfolioSocials {
     width: 100%;
@@ -952,7 +980,7 @@ header .introContainer .fa-chevron-circle-down:hover {
     margin-bottom: 40px;
   }
   .about .aboutMeText {
-    padding: 0 50px;
+    padding: 0 20px;
     width: 95%;
     text-align: center;
   }
@@ -1024,4 +1052,91 @@ footer h4 {
   padding-top: 1rem;
   text-transform: unset;
   text-align: center;
+}
+
+.map {
+  padding-left: 10px;
+}
+
+.map p {
+  line-height: 20px;
+}
+
+.map button,
+.map a,
+.map a:hover {
+  all: revert;
+}
+
+.map .mapboxgl-ctrl-attrib {
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.map .mapboxgl-ctrl-attrib a {
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.map .mapboxgl-ctrl-attrib-button {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd'%3E%3Cpath d='M4 10a6 6 0 1012 0 6 6 0 10-12 0m5-3a1 1 0 102 0 1 1 0 10-2 0m0 3a1 1 0 112 0v3a1 1 0 11-2 0'/%3E%3C/svg%3E");
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 24px;
+  height: 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 12px;
+  outline: none;
+  top: 0;
+  right: 0;
+  border: 0;
+}
+
+.map .mapboxgl-popup-close-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 0;
+  border-radius: 0 3px 0 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.map .mapboxgl-popup-close-button :hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.map .mapboxgl-popup-content a {
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.map .mapboxgl-popup-content .imgContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.map .mapboxgl-popup-content .imgContainer img {
+  width: 200px;
+  max-height: 150px;
+  padding-bottom: 10px;
+}
+
+.map .mapboxgl-marker {
+  cursor: pointer;
 }
