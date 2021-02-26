@@ -101,6 +101,10 @@ const canoeTripList = [
         name: 'toronto',
         zoom: 5,
         coords: [-79.396, 43.7], 
+        startAndEnd: {
+            start: [-80.301117, 46.037906],
+            end: [-80.451117, 46.037906]
+        },
         content: '<p>Not a canoe trip, just where I live!</p><div class="imgContainer"><img src="./images/hello.png"></img></div>' 
     },
     // coulonge
@@ -108,6 +112,10 @@ const canoeTripList = [
         name: 'coulonge',
         zoom: 6,
         coords: [-76.712803, 46.101476], 
+        startAndEnd: {
+            start: [-80.301117, 46.037906],
+            end: [-80.451117, 46.037906]
+        },
         routeCoords: [
             [
                 -76.7654228,
@@ -2657,6 +2665,10 @@ const canoeTripList = [
         name: 'hood',
         zoom: 5,
         coords: [-108.796927, 67.094416], 
+        startAndEnd: {
+            start: [-80.301117, 46.037906],
+            end: [-80.451117, 46.037906]
+        },
         routeCoords: [
             [
                 -108.8745117,
@@ -4090,6 +4102,10 @@ const canoeTripList = [
         name: 'moisie',
         zoom: 5,
         coords: [-66.440449, 50.893804], 
+        startAndEnd: {
+            start: [-80.301117, 46.037906],
+            end: [-80.451117, 46.037906]
+        },
         routeCoords: [
         [
             -66.0422516,
@@ -6290,6 +6306,10 @@ const canoeTripList = [
         name: 'french',
         zoom: 9,
         coords: [-80.291117, 46.037906], 
+        startAndEnd: {
+            start: [-80.301117, 46.037906], 
+            end: [-80.451117, 46.037906]
+        },
         routeCoords: [
             [
                 -80.0220108,
@@ -6707,6 +6727,10 @@ const canoeTripList = [
         name: 'pickerel',
         zoom: 9,
         coords: [-80.726920, 46.001954], 
+        startAndEnd: {
+            start: [-80.301117, 46.037906],
+            end: [-80.451117, 46.037906]
+        },
         routeCoords: [
             [
                 -80.4106522,
@@ -7104,6 +7128,10 @@ const canoeTripList = [
         name: 'missinaibi',
         zoom: 5,
         coords: [-83.234301, 49.759733], 
+        startAndEnd: {
+            start: [-80.301117, 46.037906],
+            end: [-80.451117, 46.037906]
+        },
         routeCoords: [
             [
                 -83.3506536,
@@ -8550,6 +8578,7 @@ function addMarkersPlusContent(props) {
         .setPopup(new mapboxgl.Popup().setHTML(props.content))
         .addTo(map);
 
+    console.log(props.startAndEnd.start);
     if (props.name != "toronto") {
         marker.getElement().addEventListener('click', () => {
 
