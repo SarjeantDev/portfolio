@@ -1,330 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to the site owned and operated by Ben Sarjeant, a aspiring front-end web developer.">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Ben Sarjeant">
-    <meta name="title" content="Sarjeant Dev">
-    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
-    <link rel="icon" href="./images/favicon.ico" type="image/icon type">
-    <title>Sarjeant Dev</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Welcome to the site owned and operated by Ben Sarjeant, a aspiring front-end web developer."
+        />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Ben Sarjeant" />
+        <meta name="title" content="Sarjeant Dev" />
+        <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+        <link rel="icon" href="./images/favicon.ico" type="image/icon type" />
+        <title>Sarjeant Dev</title>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bensarjeant.com/">
-    <meta property="og:title" content="Sarjeant Dev">
-    <meta property="og:description" content="Welcome to the site owned and operated by Ben Sarjeant, a aspiring front-end web developer.">
-    <meta property="og:image" content="./images/hello.png">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://bensarjeant.com/" />
+        <meta property="og:title" content="Sarjeant Dev" />
+        <meta
+            property="og:description"
+            content="Welcome to the site owned and operated by Ben Sarjeant, a aspiring front-end web developer."
+        />
+        <meta property="og:image" content="./images/hello.png" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://bensarjeant.com/">
-    <meta property="twitter:title" content="Sarjeant Dev">
-    <meta property="twitter:description" content="Welcome to the site owned and operated by Ben Sarjeant, a aspiring front-end web developer.">
-    <meta property="twitter:image" content="./images/hello.png">
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://bensarjeant.com/" />
+        <meta property="twitter:title" content="Sarjeant Dev" />
+        <meta
+            property="twitter:description"
+            content="Welcome to the site owned and operated by Ben Sarjeant, a aspiring front-end web developer."
+        />
+        <meta property="twitter:image" content="./images/hello.png" />
 
-    <!-- Google Fonts Import -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet"> 
+        <!-- Google Fonts Import -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;900&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- MapBox SDK -->
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+        <!-- MapBox SDK -->
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css" rel="stylesheet" />
 
-    <!-- Additional Icons -->
-    <script src="https://kit.fontawesome.com/e8e5081168.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css" rel="stylesheet">
-</head>
-<body>
-    <script>
+        <!-- Additional Icons -->
+        <script src="https://kit.fontawesome.com/e8e5081168.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <script></script>
+        <!-- HEADER SECTION -->
+        <header class="overlay">
+            <!-- hero image -->
+            <img class="heroImg" src="./images/headerBgImg.jpg" alt="" />
+            <!-- section used for navigation and content on page -->
+            <section id="headerText" class="headerText">
+                <!-- start of nav -->
+                <nav id="nav" class="flexContainer headerText">
+                    <div class="flexContainer navUl">
+                        <ul>
+                            <li class="name"><a href="">Ben Sarjeant</a></li>
+                        </ul>
+                        <ul class="flexContainer navItems" id="navItems">
+                            <li><a title="Home" href="">Home</a></li>
+                            <li><a title="About" href="#about">About</a></li>
+                            <li><a title="Services" href="#services">Services</a></li>
+                            <li><a title="Portfolio" href="#portfolio">Portfolio</a></li>
+                            <li><a title="Contact" href="#contact">Contact</a></li>
+                        </ul>
+                        <ul class="hamburgerIcon">
+                            <li onClick="hamburger()"><i class="fas fa-bars" id="hamburger"></i></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- end of nav -->
 
-    </script>
-    <!-- HEADER SECTION -->
-    <header class="overlay">
-        <!-- hero image -->
-        <img class="heroImg" src="./images/headerBgImg.jpg" alt="">
-        <!-- section used for navigation and content on page -->
-        <section id="headerText" class="headerText">
-            <!-- start of nav -->
-            <nav id="nav" class="flexContainer headerText">
-                <div class="flexContainer navUl">
-                    <ul><li class="name"><a href="">Ben Sarjeant</a></li></ul>
-                    <ul class="flexContainer navItems" id="navItems"> 
-                        <li><a title="Home" href="">Home</a></li>
-                        <li><a title="About" href="#about">About</a></li>
-                        <li><a title="Services" href="#services">Services</a></li>
-                        <li><a title="Portfolio" href="#portfolio">Portfolio</a></li>
-                        <li><a title="Contact" href="#contact">Contact</a></li>
-                    </ul>
-                    <ul class="hamburgerIcon"><li onClick="hamburger()"><i class="fas fa-bars" id="hamburger"></i></li></ul>
-                </div>
-            </nav>
-            <!-- end of nav -->
-
-            <!-- start of header content -->
-            <div class="wrapper">
-                <div class="flexContainer introContainer">
-                    <h1>Hello friend!</h1>
-                    <h2>I'm a <span class="emphasisHeader"></span></h2>
-                    <div class="downArrow">
-                        <a href="#about"><i class="fas fa-chevron-circle-down" title="Go down for more!"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- end of header content -->
-        </section>
-        <!-- end of overarching section -->
-    </header>
-    <!-- end of header section -->
-
-    <!-- START OF MAIN CONTENT -->
-    <main>
-        <!-- START OF ABOUT SECTION -->
-        <section class="wrapper flexContainer about" id="about"> 
-            <div class="aboutMeContainer flexContainer ">
-                <!-- headshot div -->
-                <div class="aboutMeImg">
-                    <img src="./images/benHeadshot.jpg" alt="">
-                </div>
-
-                <!-- about me content div -->
-                <div class="aboutMeText flexContainer">
-                    <h3>About Me</h3>
-                    <h4>Front-End Developer</h4>
-                    <p>Hi my name is Ben! I'm a Front-End Developer who recently graduated from Juno Colleges (formerly HackerYou) web
-                        development bootcamp. I love solving complex problems with simple solutions.</p>
-                    <p>I also love anything outdoors - camping, exploring, canoe tripping. The joy of exploring is what has led me to
-                        become a developer and what previously led me to study GIS. There are alway new codes to unpack and new skills
-                        to discover.</p>
-                    <p>If you want to talk code, the outdoors, or anything GIS related, just send me a <a href="#contact">message</a>!
-                    </p>
-                    <p></p>
-                    <!-- about me socials div -->
-                    <div class="flexContainer aboutMeSocials">
-                        <a title="Open Bens Twitter" href="https://twitter.com/SarjeantDev" target="_blank"><i class="fa fa-twitter"
-                                aria-hidden="true"></i></a>
-                        <a title="Open Bens Linkedin" href="https://www.linkedin.com/in/bensarjeant/" target="_blank"><i
-                                class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        <a title="Open Bens GitHub" href="https://github.com/sarjeantdev" target="_blank"><i class="fa fa-github"
-                                aria-hidden="true"></i></a>
-                    </div>
-                    <div class="aboutResume">
-                        <a href="./benSarjeantResumeWebDeveloper.pdf" target="_blank" download="" title="View Resume" class="button">
-                            View Resume
-                        </a>
-                    </div>
-                    <!-- end of about me socials div -->
-                </div>
-                <!-- end of about me content div -->
-            </div>   
-        </section>
-        <!-- end of about me section -->
-
-        <!-- SKILLS/SERVICES Section -->
-        <section class="services flexContainer" id="services">
-            <div class="wrapper servicesContainer">
-                <h4>Services</h4>
-                <h3>What I Use</h3>
-                <!-- list of skills with font awesome icons -->
-                <section class="servicesList flexContainer">
-                    <div class="servicesItem">
-                        <h5>HTML</h5>
-                        <i class="fa fa-html5" aria-hidden="true"></i>
-                    </div>
-                    <div class="servicesItem">
-                        <h5>CSS</h5>
-                        <i class="fab fa-css3-alt"></i>
-                    </div>
-                    <div class="servicesItem">
-                        <h5>JavaScript</h5>
-                        <i class="fab fa-js-square"></i>
-                    </div>
-                    <div class="servicesItem">
-                        <h5>React</h5>
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <div class="servicesItem">
-                        <h5>SASS</h5>
-                        <i class="fab fa-sass"></i>
-                    </div>
-                    <div class="servicesItem">
-                        <h5>jQuery</h5>
-                        <i class="devicon-jquery-plain"></i>
-                    </div>
-                    <div class="servicesItem">
-                        <h5>Python</h5>
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <div class="servicesItem">
-                        <h5>SQL</h5>
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="servicesItem">
-                        <h5>Git</h5>
-                        <i class="fab fa-git-square"></i>
-                    </div>
-                </section>
-                <!-- end of list of skills icons -->
-            </div>
-        </section>
-        <!-- end of services/skills section -->
-
-        <!-- START OF PORTFOLIO SECTION -->
-        <section class="wrapper portfolio flexContainer" id="portfolio">
-            <div class="portfolioContainer">
-                <h4>Portfolio</h4>
-                <h3>Work I have done</h3>
-                
-                <!-- first portfolio item -->
-                <div class="flexContainer portfolioItem">
-                    <div class="portfolioImg">
-                        <a title="Open Live Site" href="https://sarjeantdev.github.io/benSarjeantProject2/" target="_blank">
-                            <img src="./images/psdConversion.jpg" alt="">
-                            <div class="portfolioImgBackground">Open Live Site</div>
-                        </a>
-                    </div>
-                
-                    <div class="portfolioText flexContainer">
-                        <h5>PSD Conversion</h5>
-                        <p>The Restaurant Mall is a site that runs off of pure HTML & CSS showcasing my ability to receive an image
-                            (in this case a .psd file) and translate that image into a working fully functional website.</p>
-                        <div class="flexContainer portfolioSocials">
-                            <a title="View on GitHub" href="https://github.com/SarjeantDev/benSarjeantProject2/" target="_blank"><i
-                                    class="fa fa-github" aria-hidden="true"></i></a>
-                            <i class="fas fa-chevron-left"></i>
-                            <i title="CSS" class="fab fa-css3-alt"></i>
-                            <i title="HTML" class="fa fa-html5"></i>
-                            <i title="SCSS" class="fab fa-sass"></i>
-                            <i class="fas fa-chevron-right"></i>
+                <!-- start of header content -->
+                <div class="wrapper">
+                    <div class="flexContainer introContainer">
+                        <h1>Hello friend!</h1>
+                        <h2>I'm a <span class="emphasisHeader"></span></h2>
+                        <div class="downArrow">
+                            <a href="#about"><i class="fas fa-chevron-circle-down" title="Go down for more!"></i></a>
                         </div>
                     </div>
                 </div>
-                <!-- end of first portfolio item -->
-                
-                <!-- second portfolio item -->
-                <div class="flexContainer portfolioItem">
-                    <div class="portfolioText flexContainer">
-                        <h5>Find Me Some Food</h5>
-                        <p>Find Me Some Food was a pair programming project where myself and Christine Shiels worked together using
-                            jQuery and the MapQuest API to create a website showing the user the closest restaurants to their
-                            inputted address.</p>
-                        <div class="flexContainer portfolioSocials">
-                            <i class="fas fa-chevron-left"></i>
-                            <i title="CSS" class="fab fa-css3-alt"></i>
-                            <i title="HTML" class="fa fa-html5"></i>
-                            <i title="SCSS" class="fab fa-sass"></i>
-                            <i title="jQuery" class="devicon-jquery-plain"></i>
-                            <i title="Pair Programming" class="fas fa-user-friends"></i>
-                            <i class="fas fa-chevron-right"></i>
-                            <a title="View on GitHub" href="https://github.com/christineBenProj4Org/christineBenProj4"
-                                target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <!-- end of header content -->
+            </section>
+            <!-- end of overarching section -->
+        </header>
+        <!-- end of header section -->
+
+        <!-- START OF MAIN CONTENT -->
+        <main>
+            <!-- START OF ABOUT SECTION -->
+            <section class="wrapper flexContainer about" id="about">
+                <div class="aboutMeContainer flexContainer">
+                    <!-- headshot div -->
+                    <div class="aboutMeImg">
+                        <img src="./images/benHeadshot.jpg" alt="" />
+                    </div>
+
+                    <!-- about me content div -->
+                    <div class="aboutMeText flexContainer">
+                        <h3>About Me</h3>
+                        <h4>Front-End Developer</h4>
+                        <p>
+                            Hi my name is Ben! I'm a Front-End Developer who recently graduated from Juno Colleges
+                            (formerly HackerYou) web development bootcamp. I love solving complex problems with simple
+                            solutions.
+                        </p>
+                        <p>
+                            I also love anything outdoors - camping, exploring, canoe tripping. The joy of exploring is
+                            what has led me to become a developer and what previously led me to study GIS. There are
+                            alway new codes to unpack and new skills to discover.
+                        </p>
+                        <p>
+                            If you want to talk code, the outdoors, or anything GIS related, just send me a
+                            <a href="#contact">message</a>!
+                        </p>
+                        <p></p>
+                        <!-- about me socials div -->
+                        <div class="flexContainer aboutMeSocials">
+                            <a title="Open Bens Twitter" href="https://twitter.com/SarjeantDev" target="_blank"
+                                ><i class="fa fa-twitter" aria-hidden="true"></i
+                            ></a>
+                            <a
+                                title="Open Bens Linkedin"
+                                href="https://www.linkedin.com/in/bensarjeant/"
+                                target="_blank"
+                                ><i class="fa fa-linkedin" aria-hidden="true"></i
+                            ></a>
+                            <a title="Open Bens GitHub" href="https://github.com/sarjeantdev" target="_blank"
+                                ><i class="fa fa-github" aria-hidden="true"></i
+                            ></a>
+                        </div>
+                        <div class="aboutResume">
+                            <a
+                                href="./benSarjeantResumeWebDeveloper.pdf"
+                                target="_blank"
+                                download=""
+                                title="View Resume"
+                                class="button"
+                            >
+                                View Resume
+                            </a>
+                        </div>
+                        <!-- end of about me socials div -->
+                    </div>
+                    <!-- end of about me content div -->
+                </div>
+            </section>
+            <!-- end of about me section -->
+
+            <!-- SKILLS/SERVICES Section -->
+            <section class="services flexContainer" id="services">
+                <div class="wrapper servicesContainer">
+                    <h4>Services</h4>
+                    <h3>What I Use</h3>
+                    <!-- list of skills with font awesome icons -->
+                    <section class="servicesList flexContainer">
+                        <div class="servicesItem">
+                            <h5>HTML</h5>
+                            <i class="fa fa-html5" aria-hidden="true"></i>
+                        </div>
+                        <div class="servicesItem">
+                            <h5>CSS</h5>
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <div class="servicesItem">
+                            <h5>JavaScript</h5>
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="servicesItem">
+                            <h5>React</h5>
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="servicesItem">
+                            <h5>SASS</h5>
+                            <i class="fab fa-sass"></i>
+                        </div>
+                        <div class="servicesItem">
+                            <h5>jQuery</h5>
+                            <i class="devicon-jquery-plain"></i>
+                        </div>
+                        <div class="servicesItem">
+                            <h5>Angular</h5>
+                            <i class="fab fa-angular"></i>
+                        </div>
+                        <div class="servicesItem">
+                            <h5>SQL</h5>
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="servicesItem">
+                            <h5>Git</h5>
+                            <i class="fab fa-git-square"></i>
+                        </div>
+                    </section>
+                    <!-- end of list of skills icons -->
+                </div>
+            </section>
+            <!-- end of services/skills section -->
+
+            <!-- START OF PORTFOLIO SECTION -->
+            <section class="wrapper portfolio flexContainer" id="portfolio">
+                <div class="portfolioContainer">
+                    <h4>Portfolio</h4>
+                    <h3>Work I have done</h3>
+
+                    <!-- first portfolio item -->
+                    <div class="flexContainer portfolioItem">
+                        <div class="portfolioImg">
+                            <a title="Open Live Site" href="https://wstwndapparel.com/" target="_blank">
+                                <img src="./images/wstwndapprel.PNG" alt="" />
+                                <div class="portfolioImgBackground">Open Live Site</div>
+                            </a>
+                        </div>
+                        <div class="portfolioText flexContainer">
+                            <h5>wstwnd. apparel</h5>
+                            <p>
+                                wstwnd. apparel is an eCommerce website dedicated to selling Georgian Bay themed
+                                clothing and accessories. This project is in constant development with the intent to be
+                                fully operational by the end of 2023.
+                            </p>
+                            <div class="flexContainer portfolioSocials">
+                                <i class="fas fa-chevron-left"></i>
+                                <i title="HTML" class="fa fa-html5"></i>
+                                <i title="SCSS" class="fab fa-sass"></i>
+                                <i title="JavaScript" class="fab fa-js-square"></i>
+                                <i title="React" class="fab fa-react"></i>
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="portfolioImg">
-                        <a title="Open Live Site" href="https://christinebenproj4org.github.io/christineBenProj4/" target="_blank">
-                            <img src="./images/foodApp.jpg" alt="">
-                            <div class="portfolioImgBackground">Open Live Site</div>
-                        </a>
-                    </div>
-                </div>
-                <!-- end of second portfolio item -->
-                
-                <!-- start of third portfolio item -->
-                <div class="flexContainer portfolioItem">
-                    <div class="portfolioImg">
-                        <a title="Open Live Site" href="https://sarjeantdev.github.io/benSarjeantProject5/" target="_blank">
-                            <img src="./images/weatherApp.PNG" alt="">
-                            <div class="portfolioImgBackground">Open Live Site</div>
-                        </a>
-                    </div>
-                    <div class="portfolioText flexContainer">
-                        <h5>Weather App</h5>
-                        <p>I created this weather app using React & two APIs (WeatherAPI, UnsplashAPI) with the goal to keep the
-                            data and the UX as clean and simple as possible. The user inputs a city and the app will display the
-                            current weather & a nice city background, show a forecast if desired, and offer the ability to save that
-                            city for future use.</p>
-                        <div class="flexContainer portfolioSocials">
-                            <a title="View on GitHub" href="https://github.com/SarjeantDev/benSarjeantProject5" target="_blank"><i
-                                    class="fa fa-github" aria-hidden="true"></i></a>
+                    <!-- end of first portfolio item -->
 
-                            <i class="fas fa-chevron-left"></i>
-                            <!-- <span>skills</span> -->
-                            <i title="CSS" class="fab fa-css3-alt"></i>
-                            <i title="HTML" class="fa fa-html5"></i>
-                            <i title="React" class="fab fa-react"></i>
-                            <i title="JavaScript" class="fab fa-js-square"></i>
-                            <!-- <span>skills</span> -->
-                            <i class="fas fa-chevron-right"></i>
+                    <!-- second portfolio item -->
+                    <div class="flexContainer portfolioItem">
+                        <div class="portfolioText flexContainer">
+                            <h5>Transeuntium</h5>
+                            <p>
+                                Transeuntium is an ongoing project that is intended to crowd source data related to
+                                travel industry. The purpose is for users to have information on their locations of
+                                interest before they arrive. Things such as wifi levels, accessibility, sanitary and
+                                safety levels, and any other general notes users have.
+                            </p>
+                            <div class="flexContainer portfolioSocials">
+                                <i class="fas fa-chevron-left"></i>
+                                <i title="HTML" class="fa fa-html5"></i>
+                                <i title="SCSS" class="fab fa-sass"></i>
+                                <i title="JavaScript" class="fab fa-js-square"></i>
+                                <i title="React" class="fab fa-react"></i>
+                                <i title="Collaboration" class="fas fa-user-friends"></i>
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="portfolioImg">
+                            <a title="Open Live Site" href="https://transeuntium.com/" target="_blank">
+                                <img src="./images/transeuntium.PNG" alt="" />
+                                <div class="portfolioImgBackground">Open Live Site</div>
+                            </a>
                         </div>
                     </div>
-                </div>
-                <!-- end of third portfolio item -->
-            </div>
-            <!-- end of portfolio container -->
-        </section>
-        <!-- end of portfolio section -->
+                    <!-- end of second portfolio item -->
 
-        <!-- START OF CONTACT ME SECTION -->
-        <section id="contact" class="contact">
-            <!-- contact me container -->
-            <div class="wrapper flexContainer contactDivs">
-                <!-- formspree api form for email contact -->
-                <form action="https://formspree.io/f/moqpkobl" method="POST">
-                    <h3>Contact Me</h3>
-                    <h4>Send me a message, I'd love to hear from you!</h4>
-                    <p>
-                        <a href="mailto:contactbensarjeant@gmail.com" target="_blank" title="Send me an email!">Email</a> 
-                        
-                        <a href="https://linkedin.com/in/bensarjeant" target="_blank" title="Message me on Linkedin!">Linkedin</a>
-                    </p>    
+                    <!-- start of third portfolio item -->
+                    <div class="flexContainer portfolioItem">
+                        <div class="portfolioImg">
+                            <a
+                                title="Open Live Site"
+                                href="https://sarjeantdev.github.io/benSarjeantProject5/"
+                                target="_blank"
+                            >
+                                <img src="./images/weatherApp.PNG" alt="" />
+                                <div class="portfolioImgBackground">Open Live Site</div>
+                            </a>
+                        </div>
+                        <div class="portfolioText flexContainer">
+                            <h5>Weather App</h5>
+                            <p>
+                                I created this weather app using React & two APIs (WeatherAPI, UnsplashAPI) with the
+                                goal to keep the data and the UX as clean and simple as possible. The user inputs a city
+                                and the app will display the current weather & a nice city background, show a forecast
+                                if desired, and offer the ability to save that city for future use.
+                            </p>
+                            <div class="flexContainer portfolioSocials">
+                                <a
+                                    title="View on GitHub"
+                                    href="https://github.com/SarjeantDev/benSarjeantProject5"
+                                    target="_blank"
+                                    ><i class="fa fa-github" aria-hidden="true"></i
+                                ></a>
 
-                    <label for="name" class="srOnly">Your Name:</label>
-                    <input title="Write Name Here" name="name" type="text" placeholder="Name" >
-
-                    <label for="email" class="srOnly">Your Email:</label>
-                    <input title="Write Email Here" name="email" type="text" placeholder="Email" >
-
-                    <label for="message" class="srOnly">Your message:</label>
-                    <textarea title="Write Message Here" name="message" placeholder="Your Message"></textarea>
-
-                    <button title="Send Message" type="submit">Send Message</button>
-                </form>
-                <!-- end of formspree api  -->
-
-                <!-- div used to display mapbox api -->
-                <div class="map">
-                    <div id="map">
+                                <i class="fas fa-chevron-left"></i>
+                                <!-- <span>skills</span> -->
+                                <i title="CSS" class="fab fa-css3-alt"></i>
+                                <i title="HTML" class="fa fa-html5"></i>
+                                <i title="React" class="fab fa-react"></i>
+                                <i title="JavaScript" class="fab fa-js-square"></i>
+                                <!-- <span>skills</span> -->
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
                     </div>
+                    <!-- end of third portfolio item -->
                 </div>
-                <!-- end of google maps api -->
+                <!-- end of portfolio container -->
+            </section>
+            <!-- end of portfolio section -->
+
+            <!-- START OF CONTACT ME SECTION -->
+            <section id="contact" class="contact">
+                <!-- contact me container -->
+                <div class="wrapper flexContainer contactDivs">
+                    <!-- formspree api form for email contact -->
+                    <form action="https://formspree.io/f/moqpkobl" method="POST">
+                        <h3 class="contactMeHeader">Contact Me</h3>
+                        <h4>Send me a message, I'd love to hear from you!</h4>
+                        <p>
+                            <a href="mailto:contactbensarjeant@gmail.com" target="_blank" title="Send me an email!"
+                                >Email</a
+                            >
+
+                            <a
+                                href="https://linkedin.com/in/bensarjeant"
+                                target="_blank"
+                                title="Message me on Linkedin!"
+                                >Linkedin</a
+                            >
+                        </p>
+
+                        <label for="name" class="srOnly">Your Name:</label>
+                        <input title="Write Name Here" name="name" type="text" placeholder="Name" />
+
+                        <label for="email" class="srOnly">Your Email:</label>
+                        <input title="Write Email Here" name="email" type="text" placeholder="Email" />
+
+                        <label for="message" class="srOnly">Your message:</label>
+                        <textarea title="Write Message Here" name="message" placeholder="Your Message"></textarea>
+
+                        <button title="Send Message" type="submit">Send Message</button>
+                    </form>
+                    <!-- end of formspree api  -->
+
+                    <!-- div used to display mapbox api -->
+                    <div class="map">
+                        <div id="map"></div>
+                    </div>
+                    <!-- end of google maps api -->
+                </div>
+                <!-- end of contact me container -->
+            </section>
+            <!-- end of contact me section -->
+        </main>
+        <!-- END OF MAIN -->
+
+        <!-- START OF FOOTER SECTION -->
+        <footer>
+            <!-- container holding socials -->
+            <div class="flexContainer footerSocials">
+                <a title="Open Bens Twitter" href="https://twitter.com/SarjeantDev" target="_blank"
+                    ><i class="fa fa-twitter" aria-hidden="true"></i
+                ></a>
+                <a title="Open Bens Linkedin" href="https://www.linkedin.com/in/bensarjeant/" target="_blank"
+                    ><i class="fa fa-linkedin" aria-hidden="true"></i
+                ></a>
+                <a title="Open Bens GitHub" href="https://github.com/sarjeantdev" target="_blank"
+                    ><i class="fa fa-github" aria-hidden="true"></i
+                ></a>
+                <h4>Built by Ben Sarjeant</h4>
             </div>
-            <!-- end of contact me container -->
-        </section>
-        <!-- end of contact me section -->
-    </main>
-    <!-- END OF MAIN -->
+            <!-- end of container holding socials -->
+        </footer>
+        <!-- end of footer section -->
 
-    <!-- START OF FOOTER SECTION -->
-    <footer>
-        <!-- container holding socials -->
-        <div class="flexContainer footerSocials">
-            <a title="Open Bens Twitter" href="https://twitter.com/SarjeantDev" target="_blank"><i class="fa fa-twitter"
-                    aria-hidden="true"></i></a>
-            <a title="Open Bens Linkedin" href="https://www.linkedin.com/in/bensarjeant/" target="_blank"><i
-                    class="fa fa-linkedin" aria-hidden="true"></i></a>
-            <a title="Open Bens GitHub" href="https://github.com/sarjeantdev" target="_blank"><i class="fa fa-github"
-                    aria-hidden="true"></i></a>
-            <h4>Built by Ben Sarjeant</h4>
-        </div>
-        <!-- end of container holding socials -->
-    </footer>
-    <!-- end of footer section -->
-
-    <!-- CALLING SCRIPT USED FOR GOOGLE MAPS API AND NAVIGATION SCROLLING -->
-    <script src="script.js"></script>
-    
-
-</body>
+        <!-- CALLING SCRIPT USED FOR GOOGLE MAPS API AND NAVIGATION SCROLLING -->
+        <script src="script.js"></script>
+    </body>
 </html>

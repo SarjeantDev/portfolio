@@ -1,11 +1,11 @@
-// MEDIA STYLES 
+// MEDIA STYLES
 // tablet conversion - mainly for nav
 @media (max-width: 790px) {
     nav {
         position: fixed;
         background-color: $colorWhite;
         color: $colorDarkGray;
-        position: 'fixed';
+        position: "fixed";
         margin: 0;
         border-bottom: 1px solid $colorDarkGray;
     }
@@ -29,7 +29,8 @@
     }
     .portfolioItem {
         flex-direction: column-reverse;
-        h5, p {
+        h5,
+        p {
             text-align: center;
         }
         h5 {
@@ -38,7 +39,7 @@
         .portfolioText {
             width: 95%;
             align-self: center;
-             padding: 0 20px;
+            padding: 0 20px;
         }
         .portfolioSocials {
             width: 100%;
@@ -51,17 +52,17 @@
     .portfolioItem:nth-of-type(2) {
         text-align: center;
         flex-direction: column;
-        h5, i {
+        h5,
+        i {
             text-align: center;
         }
         .portfolioSocials {
             justify-content: center;
         }
     }
-
 }
 
-// mobile version 
+// mobile version
 @media (max-width: 651px) {
     .about {
         flex-direction: column;
@@ -75,9 +76,10 @@
             padding: 0 20px;
             width: 95%;
             text-align: center;
-            h3, h4 {
+            h3,
+            h4 {
                 text-align: center;
-            }   
+            }
             .aboutResume {
                 width: 100%;
             }

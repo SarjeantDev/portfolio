@@ -1,5 +1,8 @@
 // CONTACT section styles
 .contact {
+    .contactMeHeader {
+        margin-bottom: 10px;
+    }
     padding-top: 100px;
     background-color: $colorOffWhite;
     min-height: 60vh;
@@ -7,7 +10,9 @@
         justify-content: space-evenly;
         align-items: center;
     }
-    p, h3, h4 {
+    p,
+    h3,
+    h4 {
         text-align: center;
     }
     h4 {
@@ -47,11 +52,10 @@
     .map {
         width: 500px;
         height: 500px;
-        
+
         #map {
-            border-radius: 5%;
+            border-radius: 3%;
             height: 100%;
         }
     }
-
 }

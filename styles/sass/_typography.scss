@@ -1,6 +1,6 @@
 // TYPOGRAPHY STYLE SHEET
 // FONTS
-$fontRaleway: 'Raleway', sans-serif;
+$fontRaleway: "Raleway", sans-serif;
 
 h1 {
     font-size: 8.8rem;
@@ -19,7 +19,7 @@ h3 {
 
 h4 {
     font-size: 1.6rem;
-    font-weight: 500; 
+    font-weight: 500;
 }
 
 h5 {
@@ -32,7 +32,9 @@ p {
     line-height: 3rem;
 }
 
-h3, h4, h5 {
+h3,
+h4,
+h5 {
     width: 100%;
     text-transform: uppercase;
 }

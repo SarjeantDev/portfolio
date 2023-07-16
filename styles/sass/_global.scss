@@ -1,4 +1,4 @@
-// GLOBAL STYLES 
+// GLOBAL STYLES
 body {
     font-family: $fontRaleway;
     color: $colorDarkGray;
@@ -21,20 +21,25 @@ img {
     display: block;
 }
 
-
 // Stripping of styles
-*, h1, h2, h3, h4, h5, p {
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
     margin: 0;
     padding: 0;
 }
 
 li {
-    list-style: none;   
+    list-style: none;
 }
 
 a {
     text-decoration: none;
-    color:inherit;
+    color: inherit;
 }
 
 // Creation of flex container for later use
@@ -47,8 +52,7 @@ button {
     @include button();
 }
 
-button:hover, button:focus {
+button:hover,
+button:focus {
     @include buttonHover();
 }
-
-

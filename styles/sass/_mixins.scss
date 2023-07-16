@@ -1,7 +1,7 @@
 // MIXIN STYLE SHEET
 // BOX SHADOW CREATION - JUST HAVE TO SET THE X-AXIS
-@mixin imgBoxShadow($offX, $offY: 20px, $color: $colorDarkGray) {
-    box-shadow: $offX $offY 15px $color;
+@mixin imgBoxShadow($offX, $offY: 10px, $color: $colorDarkGray) {
+    box-shadow: $offX $offY 30px $color;
 }
 
 // BUTTON CREATION
@@ -13,8 +13,9 @@
     font-weight: 700;
     font-family: $fontRaleway;
     text-transform: uppercase;
-    text-align:  center;
+    text-align: center;
     border: 2px solid transparent;
+    border-radius: 3%;
     cursor: pointer;
 }
 
@@ -22,7 +23,8 @@
     color: $colorDarkGray;
     background-color: $colorWhite;
     border: 2px solid $colorDarkGray;
-    transition: color 0.5s ;    
+    transition: color 0.5s;
+    border-radius: 3%;
 }
 
 @mixin socials() {
@@ -41,5 +43,5 @@
     color: $colorDarkGray;
     background-color: $colorWhite;
     border: 2px solid $colorDarkGray;
-    transition:color 0.5s;
+    transition: color 0.5s;
 }

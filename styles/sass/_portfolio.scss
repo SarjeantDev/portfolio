@@ -1,7 +1,8 @@
 // PORTFOLIO section styles
 .portfolio {
     padding: 100px 0;
-    h3, h4 {
+    h3,
+    h4 {
         text-align: center;
     }
     .portfolioContainer {
@@ -13,11 +14,11 @@
     justify-content: space-between;
     padding: 20px 0;
     .portfolioImg {
-        border-radius: 5%;
+        border-radius: 3%;
         width: 30%;
         max-width: 400px;
         align-self: center;
-        @include imgBoxShadow(10px);
+        @include imgBoxShadow(1px);
         position: relative;
         img {
             transition: 0.5s;
@@ -37,11 +38,13 @@
         width: 100%;
         text-align: center;
     }
-    .portfolioImg:hover img, .portfolioImg:focus img{
+    .portfolioImg:hover img,
+    .portfolioImg:focus img {
         opacity: 0.5;
     }
 
-    .portfolioImg:hover .portfolioImgBackground, .portfolioImg:focus .portfolioImgBackground { 
+    .portfolioImg:hover .portfolioImgBackground,
+    .portfolioImg:focus .portfolioImgBackground {
         opacity: 1;
     }
 
@@ -61,10 +64,11 @@
         i:nth-of-type(2n) {
             margin: 0 10px;
         }
-        .fa-chevron-left{
+        .fa-chevron-left {
             margin-left: 20px;
         }
-        .fa-chevron-right, .fa-chevron-left {
+        .fa-chevron-right,
+        .fa-chevron-left {
             font-size: 1.5rem;
         }
     }
@@ -77,19 +81,21 @@
         align-items: center;
         a {
             @include socials();
-        } 
-        a:hover, a:focus {
+        }
+        a:hover,
+        a:focus {
             @include socialsHover();
-        }  
+        }
     }
     img {
-        border-radius: 5%;
+        border-radius: 3%;
     }
 }
 
 .portfolioItem:nth-of-type(2) {
     text-align: right;
-    h5, i {
+    h5,
+    i {
         text-align: right;
     }
     .fa-chevron-right {
@@ -99,6 +105,6 @@
         justify-content: right;
     }
     .portfolioImg {
-        @include imgBoxShadow(-10px);
+        @include imgBoxShadow(-1px);
     }
 }

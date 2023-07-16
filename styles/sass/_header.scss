@@ -1,8 +1,8 @@
-// HEADER STYLES 
-header {  
+// HEADER STYLES
+header {
     color: $colorWhite;
     height: 100vh;
-    overflow:hidden;
+    overflow: hidden;
     background-color: $colorBlack;
     .overlay {
         overflow: hidden;
@@ -24,13 +24,13 @@ header {
         z-index: 999;
         border-bottom: 1px solid $colorBlack;
         background-color: $colorWhite;
-        position:fixed;
+        position: fixed;
         color: $colorBlack;
     }
     .navUl {
         justify-content: space-between;
         width: 1080px;
-        padding: 2em 0;   
+        padding: 2em 0;
     }
     li {
         align-self: center;
@@ -49,11 +49,12 @@ header {
             margin: 0 5px;
             border: 1px solid transparent;
         }
-        a:hover, a:focus {
+        a:hover,
+        a:focus {
             color: $colorBlack;
-            transition: color 0.5s, border 1s, box-shadow 1s; 
+            transition: color 0.5s, border 1s, box-shadow 1s;
             font-weight: 600;
-            box-shadow: 0px 0px 0px 2px $colorBlack;    
+            box-shadow: 0px 0px 0px 2px $colorBlack;
         }
     }
     .introContainer {
@@ -65,7 +66,7 @@ header {
         .emphasisHeader {
             font-weight: 800;
         }
-        
+
         h1 {
             justify-self: flex-end;
         }
@@ -75,9 +76,9 @@ header {
         .fa-chevron-circle-down {
             font-size: 4rem;
             animation: bounce 0.5s;
-            animation-direction: alternate; 
-            animation-timing-function: cubic-bezier(.5, 0.05, 1, .5); 
-            animation-iteration-count: infinite; 
+            animation-direction: alternate;
+            animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+            animation-iteration-count: infinite;
             border: 1px solid transparent;
         }
         .fa-chevron-circle-down:hover {
@@ -89,7 +90,7 @@ header {
     }
 }
 
-// HAMBURGER MENU CREATION 
+// HAMBURGER MENU CREATION
 .hamburgerIcon {
     font-size: 4rem;
     display: none;
@@ -99,12 +100,11 @@ header {
 }
 
 // Little animation for bouncing arrow
-@keyframes bounce { 
-    from { 
-        transform: translate3d(0, 0, 0); 
-    } 
-    to { 
-        transform: translate3d(0, 40px, 0); 
-    } 
+@keyframes bounce {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 40px, 0);
+    }
 }
-
