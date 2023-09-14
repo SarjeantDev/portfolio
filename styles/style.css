@@ -553,6 +553,10 @@ header .introContainer .fa-chevron-circle-down:hover {
 }
 .about .aboutMeText p {
   width: 100%;
+  padding: 5px 0;
+}
+.about .aboutMeText h4 {
+  padding-top: 10px;
 }
 .about .aboutMeSocials {
   margin: 10px 0;
@@ -715,6 +719,9 @@ header .introContainer .fa-chevron-circle-down:hover {
 }
 .portfolioItem .portfolioText p {
   width: 100%;
+}
+.portfolioItem .portfolioText p a {
+  text-decoration: underline;
 }
 .portfolioItem .portfolioText i {
   font-size: 3rem;
